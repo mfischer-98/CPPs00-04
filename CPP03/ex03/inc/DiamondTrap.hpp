@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 12:00:16 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/30 15:33:48 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:54:45 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class DiamondTrap: public FragTrap, public ScavTrap {
 	private:
-		std::string	_name;
+		std::string	name;
 	public:
 		DiamondTrap();
 		DiamondTrap(const std::string& newName);
@@ -26,9 +26,8 @@ class DiamondTrap: public FragTrap, public ScavTrap {
 		DiamondTrap& operator=(const DiamondTrap& other);
 		~DiamondTrap();
 
-		void	whoAmI(void); //display name and claptrap name
+		void	whoAmI(void);
 		void	attack(const std::string& target);
-	
 };
 
 #endif

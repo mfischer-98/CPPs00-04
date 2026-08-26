@@ -6,14 +6,13 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:44:18 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/30 15:33:19 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:58:15 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include <iostream>
 # include "ClapTrap.hpp"
 
 class ScavTrap: virtual public ClapTrap {
