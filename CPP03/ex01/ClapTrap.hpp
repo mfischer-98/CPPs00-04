@@ -6,37 +6,37 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 13:29:46 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/30 15:32:33 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 11:16:35 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
+# include <string>
 # include <iostream>
+# include <climits>
 
 class ClapTrap {
-	private:
-		std::string	name;
-		unsigned int	hitPoints;
-		unsigned int	energyPoints;
-		unsigned int	attackDamage;
+	protected:
+		std::string		_name;
+		unsigned int	_hitPoints;
+		unsigned int	_energyPoints;
+		unsigned int	_attackDamage;
 	public:
+		// Canonical Form
 		ClapTrap();
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& other);
 		ClapTrap& operator=(const ClapTrap& other);
 		~ClapTrap();
 
-		void		setName(std::string str);
-		void		setHitPoints(int hit);
-		void		setEnergyPoints(int energy);
-		void		setAttackDamage(int attack);
-		std::string	getName() const;
-		int			getHitPoints() const;
-		int			getEnergyPoints() const;
-		int			getAttackDamage() const;
+		// Getters
+		std::string		getName() const;
+		unsigned int	getHitPoints() const;
+		unsigned int	getEnergyPoints() const;
 
+		// Member Functions
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

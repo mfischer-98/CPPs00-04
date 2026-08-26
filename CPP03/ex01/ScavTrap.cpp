@@ -6,56 +6,58 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:44:21 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/30 15:48:32 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 11:32:02 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 /* Constructors & Destructor*/
-ScavTrap::ScavTrap() : ClapTrap() {}
+ScavTrap::ScavTrap() : ClapTrap() {
+	std::cout << "ScavTrap default constructor called" << std::endl;
+}
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
-	std::cout << "ScavTrap Constructor called" << std::endl;
-	setHitPoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
+	std::cout << "ScavTrap " << _name << " has been created." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
-	std::cout << "ScavTrap Copy constructor called" << std::endl;
+	std::cout << "ScavTrap copy constructor called, copying from " << other._name << std::endl;
 	*this = other;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
-	std::cout << "ScavTrap Copy constructor called" << std::endl;
+	std::cout << "ScavTrap copy assignment operator called, assigning from " << other._name << std::endl;
 	if (this != &other)
-	{
-		setName(other.getName());
-		setHitPoints(other.getHitPoints());
-		setEnergyPoints(other.getEnergyPoints());
-		setAttackDamage(other.getAttackDamage());
-	}
+		ClapTrap::operator=(other);
 	return *this;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap Destructor called" << std::endl;
+	std::cout << "ScavTrap " << _name << " has been destroyed." << std::endl;
 }
 
 /* Member Functions */
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode. " << std::endl;
+	std::cout << "ScavTrap " << _name << " is now in Gate keeper mode. " << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {
-	if (getEnergyPoints() < 0 && getHitPoints() < 0)
+		if (_hitPoints == 0)
 	{
-		std::cout << "ScavTrap " << getName() << " cannot attack." << std::endl;
+		std::cout << "ScavTrap " << _name << " already destroyed." << std::endl;
 		return ;
 	}
-	setEnergyPoints(getEnergyPoints() - 1);
-	std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing "
-					<< getAttackDamage() << " points of damage!" << std::endl;
+	else if (_energyPoints == 0)
+	{
+		std::cout << "ScavTrap " << _name << " has no energy and cannot attack." << std::endl;
+		return ;
+	}
+	_energyPoints -= 1;
+	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing "
+				<< _attackDamage << " points of damage!" << std::endl;
 }
