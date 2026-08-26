@@ -110,8 +110,7 @@ public:
 };
 ```
 
-Here, `ScavTrap` inherits the `attack()` function from `ClapTrap` and adds its own `guardGate()` function. [web:213][web:217]
-
+Here, `ScavTrap` inherits the `attack()` function from `ClapTrap` and adds its own `guardGate()` function.
 
 ### Base class and derived class
 

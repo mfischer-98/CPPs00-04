@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 16:41:13 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 14:13:24 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 15:11:46 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor called, copying from " << _name << std::endl;
 	*this = other;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other) {
-	std::cout << "FragTrap assignment operator called" << std::endl;
+	std::cout << "FragTrap assignment operator called, assigning from " << _name << std::endl;
 	if (this != &other)
 		ClapTrap::operator=(other);
 	return *this;
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap Destructor called" << std::endl;
+	std::cout << "FragTrap " << _name << " has been destroyed" << std::endl;
 }
 
 /* Member Functions */
