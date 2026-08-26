@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:44:21 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 11:32:02 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:13:00 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 /* Constructors & Destructor*/
 ScavTrap::ScavTrap() : ClapTrap() {
+	_name = "Default";
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << "ScavTrap default constructor called" << std::endl;
 }
 

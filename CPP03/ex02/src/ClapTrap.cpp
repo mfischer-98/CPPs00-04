@@ -6,11 +6,11 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 13:29:48 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 14:08:43 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:09:28 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "../inc/ClapTrap.hpp"
 
 /* Constructors & Destructor*/
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap() : _name("Default") , _hitPoints(10), _energyPoints(10), _at
 }
 
 ClapTrap::ClapTrap(const std::string& str) : _name(str), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << "Claptrap " << _name << " has been created." << std::endl;
+	std::cout << "Claptrap " << _name << " has been created" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {

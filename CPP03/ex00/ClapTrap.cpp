@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 13:29:48 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 10:47:49 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:08:13 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ void ClapTrap::attack(const std::string& target) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (_hitPoints > 0)
-		std::cout << "ClapTrap " << _name << " took " << amount << " points of damage!" << std::endl;
+		std::cout << _name << " took " << amount << " points of damage!" << std::endl;
 	if (_hitPoints <= amount)
 	{
 		_hitPoints = 0;
-		std::cout << "ClapTrap " << _name << " has been destroyed." << std::endl;
+		std::cout << _name << " has been destroyed." << std::endl;
 		return ;
 	}
 	this->_hitPoints -= amount;
@@ -97,9 +97,8 @@ void ClapTrap::beRepaired(unsigned int amount) {
 			_hitPoints = UINT_MAX;
 		else
 			_hitPoints += amount;
-		std::cout << "ClapTrap " << _name << " heals itself, recovering " << amount
-					<< " hitPoints!" << std::endl;
+		std::cout << _name << " heals itself, recovering " << amount << " hitPoints!" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << _name << " cannot be repaired." << std::endl;
+		std::cout << _name << " cannot be repaired." << std::endl;
 }
