@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 13:29:43 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 10:50:37 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/27 10:09:37 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main()
 	ClapTrap	plankton("plankton");
 
 	std::cout << "\n*COPY TEST*" << std::endl;
-	ClapTrap	planktonB("plankton");
+	ClapTrap	planktonB(plankton);
 
 	std::cout << "\n*ASSIGNMENT OPERATOR TEST*" << std::endl;
 	planktonB = bob;

@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 13:29:48 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/26 14:08:13 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/27 10:22:17 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ ClapTrap::ClapTrap(const std::string& str) : _name(str), _hitPoints(10), _energy
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {
-	*this = other;
 	std::cout << "Copy constructor called, copying from " << other._name << std::endl;
+	*this = other;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
