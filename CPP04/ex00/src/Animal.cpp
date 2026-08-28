@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:35:14 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/27 17:45:28 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/28 09:56:35 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 Animal::Animal() {
 	std::cout << "Animal default constructor called." << std::endl;
-	this->type = "None";
+	this->_type = "None";
 }
 
-Animal::Animal(const std::string& animalType) : type(animalType) {
+Animal::Animal(const std::string& animalType) : _type(animalType) {
 	std::cout << "Animal constructor called." << std::endl;
 }
 
@@ -27,7 +27,7 @@ Animal::Animal(const Animal& other) {
 
 Animal& Animal::operator=(const Animal& other) {
 	if (this != &other)
-		this->type = other.type;
+		this->_type = other.type;
 	return *this;
 }
 
@@ -38,11 +38,11 @@ Animal::~Animal() {
 /* SETTERS & GETTERS */
 
 void	Animal::setType(std::string animalType) {
-	this->type = animalType;
+	this->_type = animalType;
 }
 
 std::string	Animal::getType() const {
-	return this->type;
+	return this->_type;
 }
 
 /* MEMBER FUNCTIONS */

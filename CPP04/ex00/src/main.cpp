@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:40:32 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/27 17:57:41 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/28 09:34:16 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,35 @@
 int main()
 {
 	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
 
-	std::cout << "-- ANIMAL TESTS --" << std::endl;
-
+	std::cout << "\n-- ANIMAL TESTS --" << std::endl;
 	std::cout << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	std::cout << cat->getType() << " " << std::endl;
 	std::cout << std::endl;
 
-	j->makeSound();
-	i->makeSound(); //will output the cat sound!
+	dog->makeSound();
+	cat->makeSound();
 	meta->makeSound();
 	std::cout << std::endl;
 
 	delete meta;
-	delete j;
-	delete i;
+	delete dog;
+	delete cat;
 
 	std::cout << std::endl;
 	std::cout << "-- WRONG ANIMAL TESTS --" << std::endl;
 
-	const WrongAnimal *k = new WrongCat();
+	const WrongAnimal *wrong = new WrongCat();
 	std::cout << std::endl;
 
-	std::cout << k->getType() << " " << std::endl;
+	std::cout << wrong->getType() << " " << std::endl;
 
-	k->makeSound();
+	wrong->makeSound();
 	std::cout << std::endl;
 
-	delete k;
+	delete wrong;
 	return 0;
 }

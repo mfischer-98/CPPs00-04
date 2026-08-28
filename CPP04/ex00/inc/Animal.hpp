@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:29:50 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/27 17:41:08 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/28 09:55:48 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Animal {
 	private:
-		std::string	type;
+		std::string	_type;
 	public:
 		Animal();
 		Animal(const std::string& animalType);

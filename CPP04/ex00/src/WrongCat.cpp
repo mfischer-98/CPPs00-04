@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:49:49 by mefische          #+#    #+#             */
-/*   Updated: 2026/07/27 17:54:08 by mefische         ###   ########.fr       */
+/*   Updated: 2026/08/28 09:34:37 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ WrongCat::~WrongCat() {
 /* MEMBER FUNCTIONS */
 
 void WrongCat::makeSound() const {
-	std::cout << "Meow" << std::endl;
+	std::cout << "Meow?" << std::endl;
 }

@@ -6,13 +6,13 @@
 #    By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/27 16:33:56 by mefische          #+#    #+#              #
-#    Updated: 2026/07/27 17:52:20 by mefische         ###   ########.fr        #
+#    Updated: 2026/08/28 10:21:06 by mefische         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = animal
 
-SRC = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp
+SRC = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 CC  = c++ -Wall -Wextra -Werror -std=c++98 -g
 
