@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:29:50 by mefische          #+#    #+#             */
-/*   Updated: 2026/09/15 11:48:15 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 14:47:20 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal {
 		virtual ~Animal();
 		
 		std::string	getType() const;
-		void		virtual makeSound() const;
+		virtual void makeSound() const;
 };
 
 #endif
