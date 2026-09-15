@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:18:23 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 11:35:13 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:17:02 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 
 Cat::Cat() {
 	std::cout << "Cat constructor called." << std::endl;
-	setType("Cat");
+	this->type = "Cat";
 	this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {
 	this->_brain = new Brain(*other._brain);
-	*this = other;
 }
 
 Cat& Cat::operator=(const Cat& other) {
 	if (this != &other)
 	{
-		this->setType(other.getType());
+		this->type = other.getType();
 		*this->_brain = *other._brain;
 	}
 	return *this;
@@ -36,7 +35,6 @@ Cat& Cat::operator=(const Cat& other) {
 Cat::~Cat() {
 	std::cout << "Cat destructor called." << std::endl;
 	delete this->_brain;
-	this->_brain = NULL;
 }
 
 /* MEMBER FUNCTIONS */

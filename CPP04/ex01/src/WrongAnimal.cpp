@@ -35,11 +35,7 @@ WrongAnimal::~WrongAnimal() {
 	std::cout << "WrongAnimal destructor called." << std::endl;
 }
 
-/* SETTERS & GETTERS */
-
-void	WrongAnimal::setType(std::string animalType) {
-	this->type = animalType;
-}
+/* GETTER */
 
 std::string	WrongAnimal::getType() const {
 	return this->type;

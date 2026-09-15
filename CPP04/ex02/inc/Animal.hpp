@@ -17,7 +17,7 @@
 
 class Animal {
 	private:
-		std::string	_type;
+		std::string	type;
 	public:
 		Animal();
 		Animal(const std::string& animalType);

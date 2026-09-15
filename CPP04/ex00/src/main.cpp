@@ -6,14 +6,12 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:40:32 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 09:34:16 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 11:10:23 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
-#include "../inc/WrongAnimal.hpp"
 #include "../inc/WrongCat.hpp"
 
 int main()

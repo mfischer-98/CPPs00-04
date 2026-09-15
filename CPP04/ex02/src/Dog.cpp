@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:20:56 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 11:57:57 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:02:27 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 
 Dog::Dog() {
 	std::cout << "Dog constructor called." << std::endl;
-	setType("Dog");
+	this->type = "Dog";
 	this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog& other) : Animal(other) {
 	this->_brain = new Brain(*other._brain);
-	*this = other;
 }
 
 Dog& Dog::operator=(const Dog& other) {
 	if (this != &other)
 	{
-		this->setType(other.getType());
+		this->type = other.getType();
 		*this->_brain = *other._brain;
 	}
 	return *this;

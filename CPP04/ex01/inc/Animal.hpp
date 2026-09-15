@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:29:50 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 09:55:39 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:11:22 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <iostream>
 
 class Animal {
-	private:
-		std::string	_type;
+	protected:
+		std::string	type;
 	public:
 		Animal();
 		Animal(const std::string& animalType);
@@ -25,7 +25,6 @@ class Animal {
 		Animal& operator=(const Animal& other);
 		virtual ~Animal();
 		
-		void		setType(std::string animalType);
 		std::string	getType() const;
 		void		virtual makeSound() const;
 };

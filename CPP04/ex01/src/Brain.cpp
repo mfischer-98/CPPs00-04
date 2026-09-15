@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 15:02:48 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 11:34:45 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:16:45 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Brain::Brain() {
 	std::cout << "Brain constructor called" << std::endl;
 	for (int i = 0; i < 100; i++)
-		this->ideas[i] = "";
+		ideas[i] = "";
 }
 
 Brain::Brain(const Brain& other) {
@@ -39,8 +39,12 @@ Brain::~Brain() {
 void Brain::setIdea(std::string thought, int index) {
 	if (index >= 0 && index < 100)
 		ideas[index] = thought;
+	else
+		std::cout << "Ideas out of range (0 - 99)" << std::endl;
 }
 
 std::string Brain::getIdea(int index) const {
-	return (ideas[index]);
+	if (index >= 0 && index < 100)
+		return (ideas[index]);
+	return "";
 }

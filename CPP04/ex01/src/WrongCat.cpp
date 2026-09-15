@@ -6,14 +6,14 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:49:49 by mefische          #+#    #+#             */
-/*   Updated: 2026/08/28 09:39:08 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 11:41:22 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/WrongCat.hpp"
 
 WrongCat::WrongCat() {
-	setType("WrongCat");
+	this->type = "WrongCat";
 	std::cout << "WrongCat constructor called." << std::endl;
 }
 
@@ -23,7 +23,7 @@ WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
 	if (this != &other)
-		this->setType(other.getType());
+		this->type = other.getType();
 	return *this;
 }
 
