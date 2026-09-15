@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:20:56 by mefische          #+#    #+#             */
-/*   Updated: 2026/09/15 12:02:27 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:17:05 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Dog& Dog::operator=(const Dog& other) {
 Dog::~Dog() {
 	std::cout << "Dog destructor called." << std::endl;
 	delete this->_brain;
-	this->_brain = NULL;
 }
 
 /* MEMBER FUNCTIONS */

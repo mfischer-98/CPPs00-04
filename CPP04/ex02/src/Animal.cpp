@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:35:14 by mefische          #+#    #+#             */
-/*   Updated: 2026/09/15 11:20:58 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 11:25:25 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,7 @@ Animal::~Animal() {
 	std::cout << "Animal destructor called." << std::endl;
 }
 
-/* SETTERS & GETTERS */
-
-void	Animal::setType(std::string animalType) {
-	this->type = animalType;
-}
+/* GETTER */
 
 std::string	Animal::getType() const {
 	return this->type;

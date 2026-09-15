@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 16:40:32 by mefische          #+#    #+#             */
-/*   Updated: 2026/09/15 12:31:25 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:32:24 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 int main()
 {
-	// std::cout << "BASIC TEST\n" << std::endl;
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
+	std::cout << "BASIC TEST\n" << std::endl;
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-	// j->makeSound();
-	// i->makeSound();
+	j->makeSound();
+	i->makeSound();
 
-	// delete j;
-	// delete i;
+	delete j;
+	delete i;
 
 	// std::cout << "*ANIMAL LOOP TEST*" << std::endl;
 

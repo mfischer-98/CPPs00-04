@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 17:18:23 by mefische          #+#    #+#             */
-/*   Updated: 2026/09/15 12:02:22 by mefische         ###   ########.fr       */
+/*   Updated: 2026/09/15 12:17:02 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Cat& Cat::operator=(const Cat& other) {
 Cat::~Cat() {
 	std::cout << "Cat destructor called." << std::endl;
 	delete this->_brain;
-	this->_brain = NULL;
 }
 
 /* MEMBER FUNCTIONS */
